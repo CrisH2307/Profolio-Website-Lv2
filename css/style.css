@@ -16,7 +16,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: rgb(4, 215, 0);
+  --main-color: rgb(68, 255, 0);
 }
 
 html {
@@ -163,19 +163,63 @@ span {
   animation-delay: calc(0.2s * var(--i));
 }
 
+/* social media hover */
 .social-media a:hover {
   background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 10px var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 0 12px var(--main-color);
 }
+
+.social-media a:before {
+  content: "";
+  background: linear-gradient(65deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.social-media a:active {
+  color: #000;
+}
+
+.social-media a:active:after {
+  background: transparent;
+}
+
+.social-media a:hover:before {
+  opacity: 1;
+}
+
+.social-media a:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  left: 0;
+  top: 0;
+  border-radius: 22px;
+}
+
+/* btn hoover */
 
 .btn {
   display: inline-block;
   padding: 10px 28px;
-  background: var(--main-color);
+  background-color: var(--main-color);
   border-radius: 40px;
-  box-shadow: 0 0 10px var(--main-color);
-  color: var(--bg-color);
+  color: var(--main-color);
   font-size: 16px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -186,8 +230,45 @@ span {
   transition: 0.5s ease;
 }
 
-.btn:hover {
-  box-shadow: none;
+.btn:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:active {
+  color: #000;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  left: 0;
+  top: 0;
+  border-radius: 22px;
 }
 
 .about {
@@ -222,11 +303,11 @@ span {
   margin: 2rem 0 3rem;
 }
 
-.service h2 {
+.knowledges h2 {
   margin-bottom: 5rem;
 }
 
-.service-container {
+.knowlegdes-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +315,7 @@ span {
   gap: 2rem;
 }
 
-.service-container .service-box {
+.knowlegdes-container .knowlegdes-box {
   flex: 1 1 30rem;
   background: var(--second-bg-color);
   padding: 3rem 2rem 4rem;
@@ -244,21 +325,21 @@ span {
   transition: 0.5s ease;
 }
 
-.service-container .service-box:hover {
+.knowlegdes-container .knowlegdes-box:hover {
   border-color: var(--main-color);
   transform: scale(1.02);
 }
 
-.service-box i {
+.knowlegdes-box i {
   font-size: 7rem;
   color: var(--main-color);
 }
 
-.service-box h3 {
+.knowlegdes-box h3 {
   font-size: 2.6rem;
 }
 
-.service-box p {
+.knowlegdes-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
@@ -413,6 +494,30 @@ span {
   color: var(--second-bg-color);
 }
 
+.submit-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  background: var(--main-color);
+  border-radius: 40px;
+  box-shadow: 0 0 10px var(--main-color);
+  color: var(--bg-color);
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  transition: 0.5s ease;
+  margin-top: 25px;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 10px var(--main-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
 /* BREAKPOINT */
 @media (max-width: 1200px) {
   html {
@@ -429,7 +534,7 @@ span {
     padding: 10rem 3% 2rem;
   }
 
-  .service {
+  .knowlegdes {
     padding-bottom: 7rem;
   }
 
@@ -499,7 +604,7 @@ span {
     margin-top: 4rem;
   }
 
-  .service h2 {
+  .knowlegdes h2 {
     margin-bottom: 3rem;
   }
 
@@ -616,5 +721,17 @@ span {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
