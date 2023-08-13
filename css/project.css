@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html
+{
+    font-size: 65.5%;
+    overflow-x: hidden;
+}
+
+body 
+{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section
+{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+.heading
+{
+    text-align: center;
+    font-size: 45px;
+}
+
+span
+{
+    color: var(--main-color);
+}
+
+.project
+{
+    background: var(--bg-color);
+}
+
+.project h2
+{
+    margin-bottom: 4rem;
+}
+
+.project-container
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.project-container .project-box
+{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.project-box img
+{
+    width: 100%;
+    height:100%;
+    transition: 1.5s ease;
+}
+
+.project-box:hover img
+{
+    transform: scale(1.1);
+}
+
+.project-box .project-layer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1), var(--bg-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateX(100%);
+    transition: .65s ease;
+}
+
+.project-box:hover .project-layer
+{
+    transform: translateY(0);
+}
+
+.project-layer h4
+{
+    font-size: 4.3rem;
+}
+
+.project-layer p
+{
+    font-size: 2.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.project-layer a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.project-layer a i
+{
+    font-size: 4rem;
+    color: var(--bg-color);
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: var(--bg-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 1;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    transition: .5s ease;
+}
+
+.btn:hover
+{
+    box-shadow: none;
+
+}
