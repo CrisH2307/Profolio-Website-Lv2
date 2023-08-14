@@ -1,6 +1,6 @@
 @import url("http://127.0.0.1:5503/index.html");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Mukta&family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Mukta&family=Nunito&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 :root {
@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 67.5%;
   overflow-x: hidden;
 }
 
@@ -48,10 +48,11 @@ header {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--text-color);
   text-decoration: none;
-  font-weight: 600;
+  font-style: inherit;
+  font-weight: 700;
   cursor: default;
   opacity: 0;
   animation: slideRight 1s ease forwards;
@@ -100,11 +101,11 @@ header {
 }
 
 .home-img img {
-  width: 32vw;
+  width: 33vw;
   animation: floatImage 4s ease-in-out infinite;
   animation-delay: 2s;
   align-items: center;
-  filter: saturate(1.6);
+  filter: brightness(0.9);
 }
 
 .home-content {
@@ -125,29 +126,42 @@ span {
 }
 
 .home-content p {
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1s;
   margin-right: 50px;
+  margin-top: 10px;
+  font-family: "Inconsolata", monospace;
 }
 
 .home-content h3 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 700;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
   animation-delay: 0.7s;
+  font-family: "Inconsolata", monospace;
+}
+
+.text {
+  font-size: 39px;
+  font-weight: 900;
+  opacity: 0;
+  animation: slideBottom 3.7s ease forwards;
+  animation-delay: 2s;
+  font-family: "Inconsolata", monospace;
 }
 
 .home-content h1 {
-  font-size: 56px;
+  font-size: 65px;
   font-weight: 700;
-  margin: -3px 0;
+  margin: 8px 0;
   line-height: 1.3;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 1s;
+  font-family: "Inconsolata", monospace;
 }
 
 .social-media a {
@@ -234,6 +248,7 @@ span {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   transition: 0.5s ease;
+  font-family: "Inconsolata", monospace;
 }
 
 .btn:before {
@@ -294,19 +309,29 @@ span {
   font-size: 45px;
 }
 
+.about-content span {
+  line-height: 1.2;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+}
+
 .about-content h2 {
   text-align: left;
   line-height: 1.2;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
 }
 
 .about-content h3 {
   font-size: 2.6rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .about-content p {
   font-size: 18px;
   line-height: 1.8;
   margin: 2rem 0 3rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .knowledges h2 {
