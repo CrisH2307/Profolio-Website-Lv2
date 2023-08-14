@@ -90,21 +90,26 @@ header {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 30px 10% auto;
+  justify-content: space-around;
+}
+
+.home-img {
+  margin-left: 20px;
 }
 
 .home-img img {
-  width: 30vw;
-  margin-right: -70px;
+  width: 32vw;
   animation: floatImage 4s ease-in-out infinite;
   animation-delay: 2s;
+  align-items: center;
 }
 
 .home-content {
-  max-width: 700px;
+  max-width: 800px;
   line-height: 1.5;
+  margin-right: -90px;
 }
 
 .home-content h3:nth-of-type(2) {
