@@ -16,7 +16,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: #ff10f0;
+  --main-color: #ff28e9;
 }
 
 html {
@@ -104,6 +104,7 @@ header {
   animation: floatImage 4s ease-in-out infinite;
   animation-delay: 2s;
   align-items: center;
+  filter: saturate(1.6);
 }
 
 .home-content {
@@ -228,7 +229,7 @@ span {
   font-size: 16px;
   letter-spacing: 1px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
