@@ -324,16 +324,42 @@ span {
 
 .about-content h3 {
   font-size: 2.6rem;
+  color: var(--main-color);
   font-family: "Nunito", sans-serif;
 }
 
 .about-content p {
   font-size: 18px;
   line-height: 1.8;
-  margin: 2rem 0 3rem;
+  margin: 3rem 0 2rem;
   font-family: "Nunito", sans-serif;
 }
 
+.about-content .about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-content .details-container {
+  margin-bottom: 2rem;
+  flex: 1;
+  background: transparent;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.details-container p {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.details-container span {
+  font-size: 18px;
+  color: white;
+}
 .knowledges h2 {
   margin-bottom: 5rem;
 }
@@ -429,7 +455,8 @@ span {
 }
 
 .portfolio-layer h4 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
 .portfolio-layer p {
