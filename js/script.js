@@ -1,6 +1,6 @@
 /*===================typed====================*/
 var typed = new Typed(".text", {
-  strings: ["Frontend Developer", "Backend Developer", "UX Designer", "Full Stack Developer", "Web Designer", "Game Designer and Developer", "Data Scientist as Software Programming Analysts"],
+  strings: ["Full Stack Developer", "Data Engineer"],
   typeSpeed: 85,
   backSpeed: 85,
   backDelay: 1000,

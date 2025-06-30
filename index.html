@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cris Huynh's Profolio</title>
+    <title>Cris Huynh's 3D Portfolio</title>
+    <link rel="stylesheet" href="css/3d-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     />
     <script
@@ -20,6 +23,7 @@
     <link rel="website icon" type="png" href="img/nineball.png" />
   </head>
   <body>
+    <div id="scene-container"></div>
     <!-- header design -->
     <header class="header">
       <a href="#" class="logo">Cris.</a>
@@ -59,7 +63,21 @@
           ></a>
           <a href="https://github.com/CrisH2307" target="_blank" style="--i: 8"><i class="bx bxl-github"></i></a>
         </div>
-        <a href="/Resume.pdf" target="_blank" class="btn">View Resume</a>
+        <a
+          href="https://drive.google.com/file/d/1rZq18l1N7MSwLpXJAdSF4PyaQi3jgbZG/view?usp=sharing"
+          target="_blank"
+          class="btn"
+          >View Resume</a
+        >
+        <br />
+        <br />
+        <br />
+        <a
+          href="https://drive.google.com/file/d/1rZq18l1N7MSwLpXJAdSF4PyaQi3jgbZG/view?usp=sharing"
+          target="_blank"
+          class="btn"
+          >View My 3D Portfolio</a
+        >
       </div>
       <div class="home-img">
         <img src="/img/avatar.PNG" alt="" />
@@ -84,18 +102,92 @@
           management and deployment through Git, I am working towards this aspiration diligently.
         </p>
         <div class="about-containers">
-          <div class="details-container">
-            <p>Experiences</p>
-            <h3>Nov 2024 - Present</h3>
-            <span>Developer and Operation for SDDC @ Seneca Polytechnic</span>
-            <br />
-            <br />
-            <br />
-            <h3>Apr 2024 - Jul 2024</h3>
-            <span>Freelance Developer at MJDM</span>
-            <br />
-            <br />
-            <br />
+          <div class="about-containers">
+            <div class="timeline">
+              <h2 class="timeline-title">Experiences</h2>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">(Upcoming) Jan 2026 - Apr 2026</div>
+                  <div class="timeline-title">SWE and SDE @ KPMG Canada</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Apr 2025 - Aug 2023</div>
+                  <div class="timeline-title">Information Technology Program Intern @ Seneca Polytechnic</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Nov 2024 - Present</div>
+                  <div class="timeline-title">Developer and Operation for SDDC @ Seneca Polytechnic</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Apr 2024 - Jul 2024</div>
+                  <div class="timeline-title">Freelance Developer at MJDM</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <h2 class="timeline-title">Competitions</h2>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Jun 2025</div>
+                  <div class="timeline-title">GDG Hacks @ Toronto Metropolitan University</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Jun 2025</div>
+                  <div class="timeline-title">SpurHacks @ University of Waterloo</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Mar 2025</div>
+                  <div class="timeline-title">Food Innovation Hackathon @ Seneca Polytechnic</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Sep 2024</div>
+                  <div class="timeline-title">Hack The North @ University of Waterloo</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Aug 2024</div>
+                  <div class="timeline-title">Hack The 6ix @ University of Toronto</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">May 2024</div>
+                  <div class="timeline-title">Google AI Hackathon</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Apr 2024</div>
+                  <div class="timeline-title">Unstoppable Domains Web3 & AI Hackathon</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Mar 2024</div>
+                  <div class="timeline-title">Housing Tech Hackathon @ Seneca Polytechnic</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">Mar 2023</div>
+                  <div class="timeline-title">Thinking North Hackathon @ Seneca Polytechnic</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -130,6 +222,12 @@
           <i class="bx bx-code-alt"></i>
           <h3>Database Analysis</h3>
           <p>Postgres SQL, MongoDB</p>
+        </div>
+
+        <div class="knowlegdes-box">
+          <i class="bx bx-cross"></i>
+          <h3>Data Engineer, Machine Learning</h3>
+          <p>Python, Pandas, Numpy, Scikit-learn</p>
         </div>
 
         <div class="knowlegdes-box">
@@ -263,5 +361,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

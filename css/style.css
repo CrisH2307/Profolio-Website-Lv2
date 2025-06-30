@@ -190,6 +190,101 @@ span {
   box-shadow: 0 0 12px var(--main-color);
 }
 
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(74, 144, 226, 0.2) 0%, rgba(74, 144, 226, 0.1) 100%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--main-color);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+}
+
+.timeline-date {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.timeline-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Add animation for timeline items */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add animation when scrolling */
+.timeline-item {
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add hover effect for timeline items */
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
 .social-media a:before {
   content: "";
   background: linear-gradient(65deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
